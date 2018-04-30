@@ -487,7 +487,7 @@ ISR(TIMER1_OVF_vect)       //interrupt service routine for sampling
   analogRead(A2);  
   Stampedsamples[next+2]=  analogRead(A2)>>2  ;
   //Stampedsamples[next+2] = 48 + (numb-48+2)%9;
-  numb=48 + (numb-48+3)%9; 
+ // numb=48 + (numb-48+3)%9; 
 
   next=next+3;
  if(next==1200){datasend=true;}   // send data if 1200 samples obtained
